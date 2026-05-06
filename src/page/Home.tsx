@@ -1,27 +1,14 @@
+import { ExperiencePage, useCache, useCardControl, useCardInfo, useDashboardInfo, useData, useExperienceInfo, useExtensionControl, useExtensionInfo, usePageControl, usePageInfo, useThemeInfo, useUserInfo } from '@ellucian/experience-extension-utils';
+import { makeStyles, TextLink, Typography } from '@ellucian/react-design-system/core';
 import { spacing20 } from '@ellucian/react-design-system/core/styles/tokens';
-import { makeStyles, Typography, TextLink } from '@ellucian/react-design-system/core';
-import {
-    useCache,
-    useCardInfo,
-    useData,
-    useExperienceInfo,
-    useExtensionControl,
-    useExtensionInfo,
-    useThemeInfo,
-    useUserInfo,
-    useDashboardInfo,
-    useCardControl,
-    usePageControl,
-    usePageInfo
-} from '@ellucian/experience-extension-utils';
 
 const useStyles = makeStyles()({
     card: {
-        margin: `0 ${spacing20}`,
+        margin: `0 ${spacing20}`
     }
 });
 
-const HomePage = (props) => {
+const HomePage: ExperiencePage = (props) => {
     const { classes } = useStyles();
     const { setPageTitle } = usePageControl();
 
@@ -29,13 +16,9 @@ const HomePage = (props) => {
 
     return (
         <div className={classes.card}>
-            <Typography variant={'h2'}>
-                Properties
-            </Typography>
+            <Typography variant={'h2'}>Properties</Typography>
             <pre className={classes.card}>{JSON.stringify(props, undefined, 3)}</pre>
-            <Typography variant={'h2'}>
-                Hooks
-            </Typography>
+            <Typography variant={'h2'}>Hooks</Typography>
             <pre className={classes.card}> useCache {JSON.stringify(useCache(), undefined, 3)}</pre>
             <pre className={classes.card}> useCardInfo {JSON.stringify(useCardInfo(), undefined, 3)}</pre>
             <pre className={classes.card}> useData {JSON.stringify(useData(), undefined, 3)}</pre>
