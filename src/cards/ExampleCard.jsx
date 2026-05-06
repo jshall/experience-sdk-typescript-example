@@ -7,13 +7,13 @@ const useStyles = makeStyles()({
     }
 });
 
-const ExperienceSdkTypescriptExampleCard = () => {
+const ExampleCard = () => {
     const { classes } = useStyles();
 
     return (
         <div className={classes.card}>
             <Typography variant="h2">
-                Hello ExperienceSdkTypescriptExample World
+                Hello World
             </Typography>
             <Typography>
                 <span>
@@ -27,4 +27,4 @@ const ExperienceSdkTypescriptExampleCard = () => {
     );
 };
 
-export default ExperienceSdkTypescriptExampleCard;
+export default ExampleCard;

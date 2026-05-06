@@ -1,7 +1,7 @@
 {
-  "name": "ExperienceSdkTypescriptExample",
+  "name": "example",
   "version": "1.0.0",
-  "description": "Description of ExperienceSdkTypescriptExample",
+  "description": "Description of Example",
   "main": "index.js",
   "license": "UNLICENSED",
   "scripts": {
